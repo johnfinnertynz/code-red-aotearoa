@@ -12,6 +12,18 @@ python -m http.server 4180 -b 127.0.0.1
 
 Then visit `http://127.0.0.1:4180/`.
 
+## Live Site
+
+GitHub Pages serves the site from the `gh-pages` branch:
+
+https://johnfinnertynz.github.io/code-red-aotearoa/
+
+After committing changes on `main`, publish them with:
+
+```powershell
+git push origin main:gh-pages
+```
+
 ## Campaign Toolkit
 
 The CTA links to:
