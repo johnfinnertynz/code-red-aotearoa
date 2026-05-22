@@ -610,14 +610,14 @@
         </div>
         <form class="action-card" aria-label="Find and email your local MP">
           <label>
-            Postcode
-            <input id="postcode-input" type="text" placeholder="8061" inputmode="numeric" autocomplete="postal-code" />
+            Street address
+            <input id="address-input" type="text" placeholder="300 Burwood Road, Christchurch" autocomplete="street-address" />
           </label>
           <button type="submit">Find my MP</button>
           <div class="mp-result" id="mp-result" aria-live="polite"></div>
           <p>
-            Postcodes can cross electorate boundaries. Verify close calls with Vote NZ, then send the evidence-backed
-            email to the MP shown.
+            This uses address geocoding and electorate boundaries for a closer match than postcode. Verify close calls
+            with Vote NZ, then send the evidence-backed email to the MP shown.
           </p>
           <div class="toolkit-links" aria-label="Campaign materials">
             <a href="toolkit/evidence-pack.html">Evidence pack</a>
@@ -671,6 +671,8 @@
           <li><a href="https://thespinoff.co.nz/society/25-04-2021/how-we-changed-the-way-we-do-health-a-view-from-the-future">Burwood Hospital source photo via The Spinoff; campaign edit created for this site</a></li>
           <li><a href="https://www.parliament.nz/en/mps-and-electorates/members-of-parliament/">New Zealand Parliament: current members of Parliament</a></li>
           <li><a href="https://vote.nz/maps/find-your-electorate">Vote NZ: official address-based electorate lookup</a></li>
+          <li><a href="https://photon.komoot.io/">Photon/OpenStreetMap address geocoding used by the MP lookup</a></li>
+          <li><a href="https://www.arcgis.com/home/item.html?id=40c7a548640d4965a0dfd2e20c426f30">Stats NZ/Eagle Technology: 2020 general electorate boundary service</a></li>
           <li><a href="https://budget.govt.nz/budget/2025/at-a-glance/b25-package.htm">New Zealand Budget 2025 package</a></li>
           <li><a href="https://budget.govt.nz/budget/2026/bps/operating-capital-allowances.htm">Budget Policy Statement 2026: operating and capital allowances</a></li>
           <li><a href="https://www.health.govt.nz/about-us/new-zealands-health-system/vote-health/budget-2025">Ministry of Health: Vote Health Budget 2025</a></li>

@@ -34,4 +34,4 @@ The CTA links to:
 
 ## Notes
 
-The postcode-to-MP lookup is a lightweight local lookup and includes a Vote NZ verification link because New Zealand postcodes do not map perfectly to electorates.
+The address-to-MP lookup geocodes a New Zealand street address, checks it against a public general-electorate boundary service, and includes a Vote NZ verification link for edge cases.
