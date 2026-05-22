@@ -490,6 +490,13 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.quote-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
 .clinical-grid,
 .privatisation-grid,
 .elder-grid,
@@ -629,11 +636,12 @@ h2 {
 }
 
 .quote-card {
-  min-height: 14rem;
+  min-height: 9.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.2rem;
+  padding: 0.85rem;
+  background: rgba(15, 20, 22, 0.96);
 }
 
 .nurse-pressure-grid {
@@ -650,11 +658,11 @@ h2 {
 }
 
 .hard-quote-wall article {
-  min-height: 14rem;
+  min-height: 9.8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.85rem;
   background:
     linear-gradient(180deg, rgba(255, 59, 48, 0.13), rgba(15, 20, 22, 0.98)),
     #0f1416;
@@ -663,27 +671,27 @@ h2 {
 .hard-quote-wall p {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  font-size: clamp(1.05rem, 1.45vw, 1.45rem);
   font-weight: 900;
-  line-height: 0.98;
+  line-height: 1.05;
 }
 
 .hard-quote-wall span {
   color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.35;
+  font-size: 0.68rem;
+  line-height: 1.25;
 }
 
 .quote-card p {
-  font-size: clamp(1.35rem, 2.5vw, 2.1rem);
+  font-size: clamp(1.05rem, 1.65vw, 1.45rem);
   font-weight: 900;
-  line-height: 1;
+  line-height: 1.05;
 }
 
 .quote-card span,
 .story-grid span {
   color: var(--teal);
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -1067,6 +1075,16 @@ h2 {
   .sources ul {
     columns: 1;
   }
+
+  .quote-grid,
+  .hard-quote-wall {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quote-card,
+  .hard-quote-wall article {
+    min-height: 8.5rem;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1077,6 +1095,17 @@ h2 {
   .toolkit-links,
   .fact-list {
     grid-template-columns: 1fr;
+  }
+
+  .quote-grid,
+  .hard-quote-wall {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-card,
+  .hard-quote-wall article {
+    min-height: auto;
+    gap: 1.2rem;
   }
 
   .section,
