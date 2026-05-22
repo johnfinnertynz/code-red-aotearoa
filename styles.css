@@ -283,6 +283,51 @@ h1 {
   line-height: 1.65;
 }
 
+[data-panel][hidden] {
+  display: none;
+}
+
+.topic-switcher {
+  width: min(var(--max), calc(100% - 2.4rem));
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1.5rem;
+  align-items: end;
+  margin: 5rem auto 0;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  background: rgba(15, 20, 22, 0.82);
+}
+
+.topic-switcher h2 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+}
+
+.topic-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.topic-tabs button {
+  min-height: 3rem;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.topic-tabs button[aria-selected="true"],
+.nav-links a.is-active {
+  border-color: transparent;
+  background: var(--red);
+  color: var(--ink);
+}
+
 .section {
   width: min(var(--max), calc(100% - 2.4rem));
   margin: 0 auto;
@@ -975,9 +1020,13 @@ h2 {
   padding: 4rem 0;
 }
 
-.sources h2 {
+.sources summary {
+  cursor: pointer;
+  list-style-position: inside;
   margin-bottom: 1rem;
+  color: var(--ink);
   font-size: 1.5rem;
+  font-weight: 900;
   line-height: 1.1;
 }
 
@@ -1027,6 +1076,7 @@ h2 {
   .hero-actions,
   .impact-strip,
   .split-intro,
+  .topic-switcher,
   .data-grid,
   .quote-grid,
   .clinical-grid,
@@ -1085,6 +1135,10 @@ h2 {
   .hard-quote-wall article {
     min-height: 8.5rem;
   }
+
+  .topic-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 520px) {
@@ -1094,6 +1148,10 @@ h2 {
 
   .toolkit-links,
   .fact-list {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-tabs {
     grid-template-columns: 1fr;
   }
 
@@ -1110,6 +1168,7 @@ h2 {
 
   .section,
   .failure-thesis,
+  .topic-switcher,
   .diagnosis-band,
   .cta,
   .sources,

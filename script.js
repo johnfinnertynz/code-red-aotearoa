@@ -208,4 +208,51 @@ const wireMpFinder = () => {
   });
 };
 
+const wireTopicSwitcher = () => {
+  const buttons = [...document.querySelectorAll("[data-view]")];
+  const panels = [...document.querySelectorAll("[data-panel]")];
+  const navLinks = [...document.querySelectorAll("[data-view-link]")];
+  if (!buttons.length || !panels.length) return;
+  const hashViews = {
+    "#frontline": "workers",
+    "#evidence": "mental",
+    "#courts": "mental",
+    "#elder-care": "elder",
+    "#funding": "budget",
+    "#privatisation": "privatisation",
+  };
+
+  const setView = (view, shouldScroll = true) => {
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.panel !== view;
+    });
+
+    buttons.forEach((button) => {
+      button.setAttribute("aria-selected", String(button.dataset.view === view));
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.dataset.viewLink === view);
+    });
+
+    if (shouldScroll) {
+      document.querySelector("#topics")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => setView(button.dataset.view));
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      setView(link.dataset.viewLink);
+    });
+  });
+
+  setView(hashViews[window.location.hash] || "workers", false);
+};
+
+wireTopicSwitcher();
 wireMpFinder();

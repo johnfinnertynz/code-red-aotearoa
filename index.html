@@ -21,12 +21,11 @@
         <span>Code Red Aotearoa</span>
       </a>
       <nav class="nav-links" aria-label="Sections">
-        <a href="#evidence">Evidence</a>
-        <a href="#frontline">Front line</a>
-        <a href="#courts">Courts</a>
-        <a href="#elder-care">Elder care</a>
-        <a href="#privatisation">Privatisation</a>
-        <a href="#funding">Funding</a>
+        <a href="#topics" data-view-link="workers">Workers</a>
+        <a href="#topics" data-view-link="mental">Mental health</a>
+        <a href="#topics" data-view-link="elder">Elder care</a>
+        <a href="#topics" data-view-link="budget">Budget</a>
+        <a href="#topics" data-view-link="privatisation">Privatisation</a>
         <a class="nav-cta" href="#act">Act now</a>
       </nav>
     </header>
@@ -83,7 +82,21 @@
         </p>
       </section>
 
-      <section id="evidence" class="section evidence">
+      <section id="topics" class="topic-switcher" aria-label="Topic sections">
+        <div>
+          <span class="section-kicker">Deep dives</span>
+          <h2>Choose the pressure point.</h2>
+        </div>
+        <div class="topic-tabs" role="tablist" aria-label="Healthcare issue sections">
+          <button type="button" data-view="workers" aria-selected="true">Worker safety</button>
+          <button type="button" data-view="mental" aria-selected="false">Mental health</button>
+          <button type="button" data-view="elder" aria-selected="false">Elder care</button>
+          <button type="button" data-view="budget" aria-selected="false">Budget</button>
+          <button type="button" data-view="privatisation" aria-selected="false">Privatisation</button>
+        </div>
+      </section>
+
+      <section id="evidence" class="section evidence" data-panel="mental" hidden>
         <div class="section-kicker">The load</div>
         <div class="split-intro">
           <h2>The demand is public. The bottleneck is public too.</h2>
@@ -157,7 +170,7 @@
         </div>
       </section>
 
-      <section class="diagnosis-band">
+      <section class="diagnosis-band" data-panel="mental" hidden>
         <div>
           <span class="section-kicker">Diagnosis caveat</span>
           <h2>Do not let the diagnosis caveat become an excuse.</h2>
@@ -171,7 +184,7 @@
         </p>
       </section>
 
-      <section class="section proof-stack">
+      <section class="section proof-stack" data-panel="mental" hidden>
         <div class="section-kicker">Failure pattern</div>
         <div class="split-intro">
           <h2>The strongest evidence is not one bad number. It is the direction of travel.</h2>
@@ -205,7 +218,7 @@
         </div>
       </section>
 
-      <section class="section clinical-voices">
+      <section class="section clinical-voices" data-panel="mental" hidden>
         <div class="section-kicker">Clinical witness</div>
         <div class="split-intro">
           <h2>Psychiatrists and psychologists are saying the quiet part out loud.</h2>
@@ -246,7 +259,7 @@
         </div>
       </section>
 
-      <section id="courts" class="section courts">
+      <section id="courts" class="section courts" data-panel="mental" hidden>
         <div class="section-kicker">Justice overflow</div>
         <div class="split-intro">
           <h2>When care arrives too late, the courts become the mental-health triage desk.</h2>
@@ -302,7 +315,7 @@
         </div>
       </section>
 
-      <section id="frontline" class="section frontline">
+      <section id="frontline" class="section frontline" data-panel="workers">
         <div class="section-kicker">The front line</div>
         <div class="split-intro">
           <h2>The people patching the gaps are being asked to pay with their health.</h2>
@@ -415,7 +428,7 @@
         </div>
       </section>
 
-      <section id="elder-care" class="section elder-care">
+      <section id="elder-care" class="section elder-care" data-panel="elder" hidden>
         <div class="section-kicker">Elder care</div>
         <div class="split-intro">
           <h2>Older people are being left at the sharp end of the bottleneck.</h2>
@@ -481,7 +494,7 @@
         </div>
       </section>
 
-      <section id="privatisation" class="section privatisation">
+      <section id="privatisation" class="section privatisation" data-panel="privatisation" hidden>
         <div class="section-kicker">Privatisation test</div>
         <div class="split-intro">
           <h2>Contracting out care is not the same as building a health system.</h2>
@@ -558,7 +571,7 @@
         </div>
       </section>
 
-      <section id="funding" class="section funding">
+      <section id="funding" class="section funding" data-panel="budget" hidden>
         <div class="section-kicker">The money</div>
         <div class="split-intro">
           <h2>Record spending can still be rationing when need rises faster.</h2>
@@ -628,8 +641,9 @@
       </section>
 
       <section class="sources" aria-label="Sources">
-        <h2>Sources and method notes</h2>
-        <ul>
+        <details>
+          <summary>Sources and method notes</summary>
+          <ul>
           <li><a href="https://www.mhwc.govt.nz/our-work/wellbeing/nz-health-survey-mental-health-and-substance-use-data/">Te Hiringa Mahara: NZ Health Survey 2024/25 mental health summary</a></li>
           <li><a href="https://www.mhwc.govt.nz/news-and-resources/young-people-missing-out-on-access-to-mental-health-services/">Te Hiringa Mahara: young people missing out on mental health service access</a></li>
           <li><a href="https://www.mhwc.govt.nz/news-and-resources/pressure-on-addiction-treatment-services-highlighted/">Te Hiringa Mahara: pressure on addiction treatment services</a></li>
@@ -679,7 +693,8 @@
           <li><a href="https://www.rnz.co.nz/news/top/527510/patient-dies-in-ed-waiting-room-at-rotorua-hospital">RNZ: Rotorua ED death</a></li>
           <li><a href="https://www.rnz.co.nz/news/national/526846/woman-died-in-waikato-hospital-because-cardiac-alarm-volume-was-turned-down">RNZ: Waikato ED alarm death</a></li>
           <li><a href="https://www.rnz.co.nz/news/national/520232/internal-investigation-confirms-pregnant-woman-died-after-delayed-icu-admission">RNZ: delayed ICU admission investigation</a></li>
-        </ul>
+          </ul>
+        </details>
       </section>
     </main>
 
