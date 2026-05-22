@@ -1046,6 +1046,25 @@ h2 {
   color: #d7dedb;
 }
 
+.site-credit {
+  width: min(var(--max), calc(100% - 2.4rem));
+  margin: 0 auto;
+  padding: 0 0 3rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.site-credit a {
+  color: var(--ink);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.site-credit a:hover {
+  color: var(--teal);
+}
+
 @media (max-width: 920px) {
   .nav-links {
     display: none;
