@@ -32,6 +32,13 @@ The CTA links to:
 - `toolkit/mp-email-template.html`
 - `toolkit/local-action-alerts.html`
 
+## Search And Entity Notes
+
+- `index.html` includes canonical, Open Graph, Twitter Card, and JSON-LD WebSite/WebPage/Person metadata.
+- Toolkit pages include canonical URLs, descriptions, author metadata, and creator footer links.
+- `robots.txt` points crawlers to `sitemap.xml`.
+- Creator links point to `https://www.johnfinnerty.co.nz/` and `https://finnerty.me/`.
+
 ## Notes
 
 The address-to-MP lookup geocodes a New Zealand street address, checks it against a public general-electorate boundary service, and includes a Vote NZ verification link for edge cases.
