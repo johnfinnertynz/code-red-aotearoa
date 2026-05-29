@@ -18,6 +18,10 @@ GitHub Pages serves the site from the `gh-pages` branch:
 
 https://johnfinnertynz.github.io/code-red-aotearoa/
 
+Project case study: [Code Red Aotearoa Case Study](https://www.johnfinnerty.co.nz/projects/code-red-aotearoa.html)
+
+Creator context: [johnfinnerty.co.nz](https://www.johnfinnerty.co.nz/) and [finnerty.me](https://finnerty.me/)
+
 After committing changes on `main`, publish them with:
 
 ```powershell
